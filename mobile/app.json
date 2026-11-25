@@ -1,0 +1,32 @@
+{
+  "expo": {
+    "name": "SKILLHUB Admin",
+    "slug": "skillhub-admin-mobile",
+    "owner": "skillhub",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/logo.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/logo.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/logo.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.skillhub.admin"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.skillhub.admin"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "fabf249b-7479-4a1e-9604-8602c6db4eff"
+      }
+    }
+  }
+}
