@@ -54,12 +54,19 @@ export const Header: React.FC<HeaderProps> = ({
     >
       <View style={styles.textContainer}>
         {appName ? (
-          <Text
-            style={[styles.appName, { color: accentColor || "#2563eb" }]}
-            numberOfLines={1}
-          >
-            {appName}
-          </Text>
+          <View style={styles.appNameRow}>
+            <Image
+              source={require("../../../assets/logo.png")}
+              style={styles.headerLogo}
+              resizeMode="contain"
+            />
+            <Text
+              style={[styles.appName, { color: accentColor || "#2563eb" }]}
+              numberOfLines={1}
+            >
+              {appName}
+            </Text>
+          </View>
         ) : null}
         <Text style={styles.title} numberOfLines={1}>
           {title || "Account Overview"}
@@ -157,12 +164,22 @@ const styles = StyleSheet.create({
     flex: 1,
     paddingRight: 12,
   },
+  appNameRow: {
+    flexDirection: "row",
+    alignItems: "center",
+    marginBottom: 2,
+  },
+  headerLogo: {
+    width: 14,
+    height: 14,
+    marginRight: 6,
+    borderRadius: 3,
+  },
   appName: {
     fontSize: 11,
     fontWeight: "700",
     textTransform: "uppercase",
     letterSpacing: 1,
-    marginBottom: 2,
   },
   title: {
     color: "#0f172a",

@@ -332,21 +332,30 @@ export const SettingsScreen: React.FC = () => {
 
           {APP_CONFIG.organization || APP_CONFIG.author ? (
             <View className="pt-3 border-t border-slate-200">
-              {APP_CONFIG.organization ? (
-                <View className="flex-row items-center mb-1">
-                  <Building2 size={14} color="#64748b" />
-                  <Text className="text-slate-800 text-xs font-semibold ml-1.5">
-                    {APP_CONFIG.organization}
+              <View className="flex-row items-center mb-2.5">
+                <Image
+                  source={require("../../assets/logo.png")}
+                  style={{ width: 36, height: 36, marginRight: 12, borderRadius: 8 }}
+                  resizeMode="contain"
+                />
+                <View className="flex-1">
+                  <Text className="text-slate-900 text-sm font-bold">
+                    {customAppName || appName || "SKILLHUB Admin"}
                   </Text>
+                  {APP_CONFIG.organization ? (
+                    <Text className="text-slate-500 text-xs">
+                      {APP_CONFIG.organization}
+                    </Text>
+                  ) : null}
                 </View>
-              ) : null}
+              </View>
               {APP_CONFIG.author ? (
-                <Text className="text-slate-500 text-xs ml-5">
+                <Text className="text-slate-500 text-xs">
                   Developed by {APP_CONFIG.author}
                 </Text>
               ) : null}
               {APP_CONFIG.officialWebsite ? (
-                <Text className="text-slate-400 text-xs ml-5 mt-0.5">
+                <Text className="text-slate-400 text-xs mt-0.5">
                   {APP_CONFIG.officialWebsite}
                 </Text>
               ) : null}
